@@ -519,6 +519,9 @@ img {
     display: flex;
     flex-wrap: wrap;
 }
+.features-link {
+    display: block;
+}
 .features-list > .item {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
