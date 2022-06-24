@@ -31,10 +31,11 @@ img {
     padding-right: 15px;
     padding-left: 15px;
     
-
-
     /* outline: 2px solid tomato; */
-}                    
+}         
+.hoverfocus {
+    display: block;
+}         
                     
                     /* !!! index.html !!! */
 .bodypage {
@@ -353,27 +354,36 @@ img {
     gap: 30px;
 }
 .clients-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 170px;
     height: 92px;
-
-    
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
 }
 .clients-item .icon {
     fill: #AFB1B8;
 }
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    height: 92px;  
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+    fill: #AFB1B8
+}
 .clients-link:hover .icon,
 .clients-link:focus .icon {
     fill: var(--additional-text-color);
+    outline: none;
 }
-.clients-item:hover,
-.clients-item:focus {
+.clients-link:hover,
+.clients-link:focus {
     border-color: var(--additional-text-color);
+    outline: none;
 }
+
                     /* Footer */
 .footer-background {
     background-color: #2F303A;
