@@ -3,7 +3,8 @@
     --secondary-text-color: #757575; 
     --additional-text-color: #2196F3;
     --white-tex-color: #FFFFFF;
-}      
+}    
+
 ul {
     list-style: none;
     padding: 0;
@@ -27,6 +28,7 @@ img {
     padding-right: 15px;
     padding-left: 15px;
     
+
 
     /* outline: 2px solid tomato; */
 }                    
@@ -119,11 +121,22 @@ img {
                     /* Main */
 /* Main: Hero */
 .hero {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
     padding-top: 200px;
     padding-bottom: 200px;
 
-    color: var(--white-tex-color);
+    
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/effectivedecisions.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
     background-color: #2F303A;
+    color: var(--white-tex-color);
     text-align: center;
 }
 .hero-tittle {
@@ -171,6 +184,17 @@ img {
 }
 .specification-list > .item:not(:last-child) {
     margin-right: 30px;
+}
+.specific-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: #F5F4FA;
+
 }
 .specification-list .tittle {
     margin-bottom: 10px;
