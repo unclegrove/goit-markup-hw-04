@@ -18,8 +18,11 @@ p {
     padding: 0;
     margin: 0;
 }
+
 img {
-    vertical-align: middle;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 .container {
     width: 1200px;
@@ -94,15 +97,19 @@ img {
 .header-navigation.current {
     color: var(--additional-text-color);
 }
-.header-auth {
-    display: flex;
+.header-contact-panel {
     margin-left: auto;
 }
+.header-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header-auth .item:not(:last-child) {
     margin-right: 50px;
 }
 .header-auth a {
-    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -117,7 +124,20 @@ img {
 .header-auth a:focus {
     color: var(--additional-text-color);
 }
+.header-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-svg {
+    margin-right: 10px;
 
+    fill: #757575;
+}
+.header-contacts:hover .header-svg, 
+.header-contacts:focus .header-svg {
+    fill: var(--additional-text-color);
+}
                     /* Main */
 /* Main: Hero */
 .hero {
@@ -258,6 +278,7 @@ img {
     border-radius: 0px 0px 4px 4px;
 
     background-color: var(--white-tex-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-list > .item + .item {
     margin-left: 30px;
@@ -281,12 +302,87 @@ img {
 .item > .box {
     padding-top: 30px;
     padding-bottom: 30px;
+
+    
+}
+.paragraph.bottom {
+    margin-bottom: 1rem;
+}
+.social-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #afb1b8;
+}
+.social-icon:hover,
+.social-icon:focus {
+    background-color: var(--additional-text-color);
+    outline: none;
+}
+.social-icon:hover .icon,
+.social-icon:focus .icon {
+    fill: #ffffff;
+}
+
+
+/* Main: Clients */
+.clients.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    text-align: center;
+}
+.clients-title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.clients-list {
+    display: flex;
+    gap: 30px;
+}
+.clients-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+
+    
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+.clients-item .icon {
+    fill: #AFB1B8;
+}
+.clients-link:hover .icon,
+.clients-link:focus .icon {
+    fill: var(--additional-text-color);
+}
+.clients-item:hover,
+.clients-item:focus {
+    border-color: var(--additional-text-color);
 }
                     /* Footer */
 .footer-background {
     background-color: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+.footer-main.container {
+    display: flex;
+    align-items: baseline;
 }
 .footer-logo {
     display: block;
@@ -328,6 +424,39 @@ img {
 .footer-list a:hover, 
 .footer-list a:focus {
     color: var(--additional-text-color);
+}
+.footer-join {
+    margin-left: 70px;
+}
+.footer-join-tittle {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+.footer-join-list {
+    display: flex;
+    gap: 10px;
+}
+.footer-join-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);;
+}
+.footer-join-link:hover,
+.footer-join-link:focus {
+    background-color: var(--additional-text-color);
+    outline: none;
 }
 
                     /* !!! portfolio.html !!! */
@@ -384,6 +513,13 @@ img {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
+}
+.features-list > .item:hover,
+.features-list > .item:focus {
+    outline: none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .features-list > .item:nth-child(3n) {
     margin-right: 0;    
